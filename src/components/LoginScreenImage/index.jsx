@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import displayScreenImage from '../../assets/undraw-upload-re-pasx.png';
+import displayScreenImage from '../../assets/undraw-upload-re-pasx@3x.png';
 import React from 'react';
 import './index.css';
 

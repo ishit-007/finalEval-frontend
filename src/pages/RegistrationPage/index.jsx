@@ -1,17 +1,17 @@
-import { InputCredentialsForLogin, LoginScreenImage } from '../../components';
+import { InputCredentialsForRegister, LoginScreenImage } from '../../components';
 import React from 'react';
 
-const LoginPage = () => {
+const RegistrationPage = () => {
   return (
     <div className="loginPage">
       <div className="loginPage__left">
         <LoginScreenImage />
       </div>
       <div className="loginPage__right">
-        <InputCredentialsForLogin/>
+        <InputCredentialsForRegister />
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default RegistrationPage;

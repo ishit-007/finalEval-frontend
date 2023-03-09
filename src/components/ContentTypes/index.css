@@ -1,0 +1,189 @@
+.content-types {
+  height: 100vh;
+  background-color: blue;
+  width: 70vw;
+}
+.content-types .heading {
+  margin-bottom: 0;
+  background-color: white;
+  color: #414041;
+  height: 8%;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.new-content {
+  display: flex;
+  flex-direction: column;
+}
+.new-content input {
+  width: 500px;
+}
+.modal-content,
+.modal-content2 {
+  border-radius: 10px;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 40px;
+  border: 1px solid #888;
+  width: 35%; /* Could be more or less, depending on screen size */
+}
+.new-content p {
+  margin-top: 20px;
+}
+.modal-content input,
+.modal-content2 input {
+  width: 90%;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(18, 154, 252);
+}
+.btns {
+  gap: 1rem;
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.btns .cancel {
+  background-color: inherit;
+  border: none;
+  padding: 20px;
+  font-weight: 700;
+  font-size: medium;
+}
+.btns .create {
+  font-weight: 700;
+  font-size: medium;
+  background-color: #5a03ce;
+  border: none;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 200px;
+  border-radius: 6px;
+}
+.modal,
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.existing {
+  border-radius: 6px;
+  color: #939393;
+  padding: 10px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-left: 10%;
+  height: 45px;
+  align-content: center;
+  background-color: white;
+  font-weight: 600;
+}
+.addNewType {
+  font-weight: 600;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 50px;
+  background-color: white;
+  color: #5a03ce;
+  border-color: #5a03ce;
+  border-style: dashed;
+  border-radius: 6px;
+}
+.container {
+  background-color: #ebeefe;
+  height: 92%;
+}
+.one-type-fields {
+  position: absolute;
+  right: 0;
+  top: 8vh;
+  background-color: #ebeefe;
+  width: 49%;
+  height: 92%;
+}
+.one-type-fields {
+  background-color: #ebeefe;
+}
+.one-type-fields .heading {
+  padding: 20px;
+  background-color: #ebeefe;
+}
+.one-type-fields .heading h3 {
+  padding-top: 10px;
+  color: #95969e;
+}
+.container .new-types-content {
+  height: 92%;
+}
+.container .new-types {
+  width: 30%;
+  height: 100%;
+  background-color: #d4d6e5;
+}
+.container .new-types-header {
+  padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 35px;
+  background-color: #d4d6e5;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+.addField {
+  font-weight: 600;
+  color: #5a03ce;
+  height: 40px;
+  background-color: #f4f6ff;
+  border-radius: 6px;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px #5a03ce;
+  border-style: dashed;
+}
+.existing-field img {
+  margin-right: 10px;
+}
+.existing-field {
+  color: #aaaaaa;
+  border-radius: 4px;
+  margin-top: 20px;
+  height: 40px;
+  margin-left: 10%;
+  background-color: white;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.existing-field .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  border-radius: 4px;
+  width: 10%;
+  background-color: #7691ff;
+  height: 40px;
+}

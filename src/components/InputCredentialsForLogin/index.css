@@ -16,6 +16,10 @@
   color: #79797a;
   font-weight: 400;
 }
+.other-Option{
+  padding-top: 10px;
+  text-decoration: none;
+}
 .heading {
   margin-bottom: 50px;
 }
