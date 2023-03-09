@@ -1,14 +1,12 @@
 
 import './App.css';
 import React from 'react';
-import { Header,Footer } from './components';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Footer />
-      <h1>React App</h1>
+      <LoginPage />
     </div>
   );
 }

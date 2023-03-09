@@ -1,0 +1,15 @@
+.loginImage {
+  position: relative;
+}
+.loginImage img {
+  height: 800px;
+  width: 800px;
+}
+.loginImage .content {
+  position: absolute;
+  color: #4f4f4f;
+  transform: translate(250px,-790px);
+}
+.loginImage .content h1{
+  padding-top: 30px;
+}
