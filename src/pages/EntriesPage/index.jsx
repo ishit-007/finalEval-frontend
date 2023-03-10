@@ -30,6 +30,7 @@ const EntriesPage = () => {
           .then(resp => {
             console.log(resp.data);
             setAllEntries(resp.data);
+            console.log(resp.data);
           })
           .catch(err => {
             console.log(err);
@@ -39,7 +40,16 @@ const EntriesPage = () => {
         console.log(err);
       });
   }, []);
-
+  const deleteHandler = entry => {
+    axios
+      .delete(`http://localhost:8080/entry/delete/${entry.id}`)
+      .then(resp => {
+        window.location.reload();
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   return (
     <div className="allEntries">
       <div className="left">
@@ -63,7 +73,14 @@ const EntriesPage = () => {
                   <p>Text</p>
                   <div className="icons">
                     <img src={editButton} style={{ height: '25px', width: '25px', margin: '10px' }} alt="" />
-                    <img src={deleteButton} style={{ height: '25px', width: '25px', margin: '10px' }} alt="" />
+                    <img
+                      src={deleteButton}
+                      style={{ height: '25px', width: '25px', margin: '10px' }}
+                      alt=""
+                      onClick={() => {
+                        deleteHandler(entry);
+                      }}
+                    />
                   </div>
                 </div>
               );

@@ -11,10 +11,26 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/login" element={<LoginPage/>} />
-        <Route path="/register" element={<RegistrationPage/>} />
-        <Route path="/content-types" element={<ContentTypesPage/>} />
-        <Route path="/content-types/:id" element={<ProtectedRoutes><EntriesPage/></ProtectedRoutes>} />
+        <Route path="/login" element={<LoginPage />} />
+
+        <Route path="/register" element={<RegistrationPage />} />
+        
+        <Route
+          path="/content-types"
+          element={
+            <ProtectedRoutes>
+              <ContentTypesPage />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/content-types/:id"
+          element={
+            <ProtectedRoutes>
+              <EntriesPage />
+            </ProtectedRoutes>
+          }
+        />
       </Routes>
     </div>
   );

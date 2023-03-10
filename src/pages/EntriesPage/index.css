@@ -1,8 +1,8 @@
-.allEntries{
+.allEntries {
   display: flex;
   background-color: #ebeefe;
 }
-.right .heading{
+.right .heading {
   display: flex;
   padding-top: 20px;
   padding-left: 20px;
@@ -12,10 +12,10 @@
   background-color: white;
   color: #403f40;
 }
-.numEntries{
+.numEntries {
   margin-left: 20px;
 }
-.entriesList{
+.entriesList {
   margin-top: 50px;
   width: 70vw;
   display: flex;
@@ -24,7 +24,7 @@
   flex-direction: column;
   gap: 2rem;
 }
-.entry{
+.entry {
   color: #a9a9a9;
   padding-left: 20px;
   display: flex;
@@ -33,5 +33,6 @@
   width: 70%;
   height: 60px;
   background-color: white;
-  border-radius:8px ;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
