@@ -52,7 +52,7 @@ const ContentTypes = props => {
   const deleteFieldHandler = attribute => {
     console.log(attribute, selectedContentData.id);
     axios
-      .delete(`http://localhost:8080/attributes/delete/${selectedContentData.id}/${attribute}`, )
+      .delete(`http://localhost:8080/attributes/delete/${selectedContentData.id}/${attribute}`)
       .then(resp => {
         console.log(resp);
         window.location.reload();
@@ -143,7 +143,13 @@ const ContentTypes = props => {
             />
           </div>
           <div className="btns">
-            <button className="cancel">Cancel</button>
+            <button
+              className="cancel"
+              onClick={() => {
+                setModal2IsOpen('none');
+              }}>
+              Cancel
+            </button>
             <button className="create" onClick={createNewFieldHandler}>
               Create
             </button>
@@ -166,6 +172,7 @@ const ContentTypes = props => {
             </div>
             <div className="existing-types">
               {contentTypes.map(contentType => {
+                console.log('contentType: ', contentType);
                 return (
                   <div
                     key={Math.random()}
@@ -210,12 +217,12 @@ const ContentTypes = props => {
                         <img
                           src={deleteButton}
                           alt=""
-                          style={{ height: '20px', width: '20px' }}
+                          
                           onClick={() => {
                             deleteFieldHandler(attribute);
                           }}
                         />
-                        <img src={editButton} alt="" style={{ height: '20px', width: '20px' }} />
+                        <img src={editButton} alt="" />
                       </div>
                     </div>
                   );

@@ -132,6 +132,8 @@
   height: 92%;
 }
 .container .new-types {
+  padding-bottom: 0;
+  overflow: scroll;
   width: 30%;
   height: 100%;
   background-color: #d4d6e5;
@@ -186,4 +188,13 @@
   width: 10%;
   background-color: #7691ff;
   height: 40px;
+}
+.existing-field .icons img{
+    height: 20px;
+    width: 20px;
+  }
+
+
+@media only screen and (max-width: 600px) {
+  
 }

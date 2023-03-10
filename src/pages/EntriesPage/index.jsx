@@ -8,6 +8,7 @@ import deleteButton from '../../assets/trash-delete-recycle-bin-bucket-waste.png
 import editButton from '../../assets/user-edit-text-message-note.png';
 
 const EntriesPage = () => {
+  const [modalIsOpen, setModalIsOpen] = React.useState('none');
   const [allContentTypes, setAllContentTypes] = React.useState([]);
   const [thisContentType, setThisContentType] = React.useState('');
   const [allEntries, setAllEntries] = React.useState([]);
@@ -24,6 +25,7 @@ const EntriesPage = () => {
             return false;
           }
         });
+        console.log(filteredData[0]);
         setThisContentType(filteredData[0]);
         axios
           .get(`http://localhost:8080/entries/contentType/${id}`)
@@ -50,18 +52,68 @@ const EntriesPage = () => {
         console.log(err);
       });
   };
+  window.onclick = e => {
+    if (e.target.className === 'modal') {
+      setModalIsOpen('none');
+    }
+  };
   return (
     <div className="allEntries">
       <div className="left">
         <CollectionTypes />
       </div>
       <div className="right">
+        <div id="myModal" className="modal" style={{ display: modalIsOpen }}>
+          <div className="modal-content-full">
+            <h1>Company Profile</h1>
+            <div className="modal-content-inner">
+              <label htmlFor="">Name</label>
+              <input type="text" />
+            </div>
+            <div className="modal-content-inner">
+              <label htmlFor="">Name</label>
+              <input type="text" />
+            </div>
+            <div className="modal-content-inner">
+              <label htmlFor="">Name</label>
+              <input type="text" />
+            </div>
+            <div className="modal-content-inner">
+              <label htmlFor="">Name</label>
+              <input type="text" />
+            </div>
+            <div className="modal-content-inner">
+              <label htmlFor="">Name</label>
+              <input type="text" />
+            </div>
+            <div className="modal-content-inner">
+              <label htmlFor="">Name</label>
+              <input type="text" />
+            </div>
+            <div className="buttons">
+              <button
+                className="cancel"
+                onClick={() => {
+                  setModalIsOpen('none');
+                }}>
+                Cancel
+              </button>
+              <button className="save">Save</button>
+            </div>
+          </div>
+        </div>
         <div className="heading">
           <h1>{thisContentType.name}</h1>
         </div>
         <div className="entries">
           <div className="numEntries">
             <h1>{allEntries.length} Entries Found</h1>
+            <p
+              onClick={() => {
+                setModalIsOpen('block');
+              }}>
+              Add a new entry
+            </p>
           </div>
           <div className="entriesList">
             {allEntries.map(entry => {
