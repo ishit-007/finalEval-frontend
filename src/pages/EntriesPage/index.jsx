@@ -63,9 +63,6 @@ const EntriesPage = () => {
         console.log(err);
       });
   };
-  const editHandler = entry => {
-    console.log(entry);
-  };
   window.onclick = e => {
     if (e.target.className === 'modal') {
       setModalIsOpen('none');
@@ -144,9 +141,7 @@ const EntriesPage = () => {
                       src={editButton}
                       style={{ height: '25px', width: '25px', margin: '10px' }}
                       alt=""
-                      onClick={() => {
-                        editHandler(entry);
-                      }}
+                      contentEditable="true"
                     />
                     <img
                       src={deleteButton}
