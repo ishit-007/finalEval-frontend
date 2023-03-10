@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionTypes should render the CollectionTypes component 1`] = `
+<DocumentFragment>
+  <div
+    class="collection-types"
+  >
+    <div
+      class="heading"
+    >
+      <h1>
+        CMS+
+      </h1>
+    </div>
+    <div
+      class="collection-list"
+    >
+      <div
+        class="collection-types-header"
+      >
+        <h2>
+          COLLECTION TYPES
+        </h2>
+        <img
+          alt=""
+          src="icon-search-dark.png"
+        />
+      </div>
+      <div
+        class="collection-types-list"
+      >
+        <ul
+          class="collection-types-list"
+        />
+      </div>
+      <div
+        class="builder"
+      >
+        <p>
+          CONTENT TYPE BUILDER
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

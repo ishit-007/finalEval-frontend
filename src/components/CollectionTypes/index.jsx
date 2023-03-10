@@ -34,7 +34,7 @@ const CollectionTypes = props => {
         setContentTypes(resp.data);
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
       });
   }, []);
 
