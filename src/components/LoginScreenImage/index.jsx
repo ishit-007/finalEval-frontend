@@ -8,8 +8,8 @@ const LoginScreenImage = () => {
     <div className="loginImage">
       <img src={displayScreenImage} alt="Login Screen" />
       <div className="content">
-        <h1>Design API's fast,</h1>
-        <h1>Manage content easily.</h1>
+        <h2>Design API's fast,</h2>
+        <h2>Manage content easily.</h2>
       </div>
     </div>
   );
