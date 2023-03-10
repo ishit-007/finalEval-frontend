@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentTypes should render the ContentTypes component 1`] = `
+<div
+  className="content-types"
+>
+  <div
+    className="heading"
+  >
+    <h1
+      onClick={[Function]}
+    >
+      Content Types
+    </h1>
+  </div>
+  <div
+    className="modal"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div
+      className="modal-content"
+    >
+      <h3>
+        Create a New Content Type
+      </h3>
+      <div
+        className="new-content"
+      >
+        <p>
+          Name of the content type
+        </p>
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="btns"
+      >
+        <button
+          className="cancel"
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="create"
+          onClick={[Function]}
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="modal2"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div
+      className="modal-content2"
+    >
+      <h3>
+        Create a New Field
+      </h3>
+      <div
+        className="new-content"
+      >
+        <p>
+          Name of the field
+        </p>
+        <input
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </div>
+      <div
+        className="btns"
+      >
+        <button
+          className="cancel"
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="create"
+          onClick={[Function]}
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="new-types-content"
+    >
+      <div
+        className="new-types-header"
+      >
+        <p>
+          0
+           Types
+        </p>
+        <img
+          alt=""
+          src="icon-search-dark.png"
+        />
+      </div>
+      <div
+        className="new-types"
+      >
+        <div
+          className="addNewType"
+          onClick={[Function]}
+        >
+          + New Type
+        </div>
+        <div
+          className="existing-types"
+        />
+      </div>
+      <div
+        className="single-type-fields"
+      />
+    </div>
+    <div
+      className="one-type-fields"
+    >
+      <div
+        className="heading"
+      >
+        <h1 />
+        <h3>
+           Fields
+        </h3>
+      </div>
+      <div
+        className="addField"
+        onClick={[Function]}
+      >
+        Add another field
+      </div>
+      <div
+        className="existing-fields"
+      />
+    </div>
+  </div>
+</div>
+`;

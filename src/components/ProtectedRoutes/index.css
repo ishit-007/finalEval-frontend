@@ -8,30 +8,30 @@
   align-items: center;
 }
 
-a {
+.unAuthorized a {
   color: white;
   text-decoration: none;
 }
 
-.text {
+.unAuthorized .text {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
 }
-.title {
+.unAuthorized .title {
   font-size: 5em;
   font-weight: 700;
   color: white;
 }
 
-.title-2 {
+.unAuthorized .title-2 {
   font-size: 40px;
   font-weight: 700;
   color: #0c437dc3;
 }
-.buttons {
+.unAuthorized .buttons {
   margin-left: 50vw;
   width: fit-content;
   margin: 30px;

@@ -13,8 +13,13 @@ const CollectionTypes = props => {
 
   const navigate = useNavigate();
   React.useEffect(() => {
+    const token = localStorage.getItem('token');
     axios
-      .get('http://localhost:8080/contentTypes/all')
+      .get('http://localhost:8080/contentTypes/all', {
+        headers: {
+          token: token,
+        },
+      })
       .then(resp => {
         if (resp.data.length > 0) {
           const filteredData = resp.data.filter(contentType => {

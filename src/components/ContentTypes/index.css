@@ -120,7 +120,12 @@
 .one-type-fields {
   background-color: #ebeefe;
 }
+.one-type-fields .heading h3{
+  margin-top: 15px;
+}
 .one-type-fields .heading {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
   background-color: #ebeefe;
 }

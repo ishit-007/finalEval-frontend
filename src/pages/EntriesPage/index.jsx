@@ -14,8 +14,13 @@ const EntriesPage = () => {
   const [allEntries, setAllEntries] = React.useState([]);
   const { id } = useParams();
   React.useEffect(() => {
+    const token = localStorage.getItem('token');
     axios
-      .get('http://localhost:8080/contentTypes/all')
+      .get('http://localhost:8080/contentTypes/all', {
+        headers: {
+          token: token,
+        },
+      })
       .then(resp => {
         setAllContentTypes(resp.data);
         const filteredData = resp.data.filter(contentType => {
@@ -28,7 +33,11 @@ const EntriesPage = () => {
         console.log(filteredData[0]);
         setThisContentType(filteredData[0]);
         axios
-          .get(`http://localhost:8080/entries/contentType/${id}`)
+          .get(`http://localhost:8080/entries/contentType/${id}`,{
+            headers: {
+              token: token,
+            },
+          })
           .then(resp => {
             console.log(resp.data);
             setAllEntries(resp.data);

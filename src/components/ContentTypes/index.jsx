@@ -20,10 +20,19 @@ const ContentTypes = props => {
   const [newField, setNewField] = React.useState('');
 
   const createNewContentTypeHandler = e => {
+    const token = localStorage.getItem('token');
     axios
-      .post('http://localhost:8080/contentTypes/create', {
-        contentTypeName: newContentType,
-      })
+      .post(
+        'http://localhost:8080/contentTypes/create',
+        {
+          contentTypeName: newContentType,
+        },
+        {
+          headers: {
+            token: token,
+          },
+        }
+      )
       .then(resp => {
         setModalIsOpen('none');
         setModal2IsOpen('none');
@@ -50,9 +59,14 @@ const ContentTypes = props => {
       });
   };
   const deleteFieldHandler = attribute => {
+    const token = localStorage.getItem('token');
     console.log(attribute, selectedContentData.id);
     axios
-      .delete(`http://localhost:8080/attributes/delete/${selectedContentData.id}/${attribute}`)
+      .delete(`http://localhost:8080/attributes/delete/${selectedContentData.id}/${attribute}`, {
+        headers: {
+          token: token,
+        },
+      })
       .then(resp => {
         console.log(resp);
         window.location.reload();
@@ -71,8 +85,13 @@ const ContentTypes = props => {
   };
 
   React.useEffect(() => {
+    const token = localStorage.getItem('token');
     axios
-      .get('http://localhost:8080/contentTypes/all')
+      .get('http://localhost:8080/contentTypes/all', {
+        headers: {
+          token: token,
+        },
+      })
       .then(resp => {
         setContentTypes(resp.data);
         const filteredData = resp.data.filter(contentType => {
@@ -191,7 +210,7 @@ const ContentTypes = props => {
         </div>
         <div className="one-type-fields">
           <div className="heading">
-            <h1>Company_Profile</h1>
+            <h1>{selectedContentData.name}</h1>
             <h3>
               {selectedContentData && selectedContentData.attributes && selectedContentData.attributes.length} Fields
             </h3>
@@ -217,7 +236,6 @@ const ContentTypes = props => {
                         <img
                           src={deleteButton}
                           alt=""
-                          
                           onClick={() => {
                             deleteFieldHandler(attribute);
                           }}
