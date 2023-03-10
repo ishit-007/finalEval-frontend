@@ -12,6 +12,7 @@
   height: 8%;
   padding-left: 20px;
 }
+
 .collection-types-header{
   padding-left: 20px;
   padding-right: 20px;
@@ -20,6 +21,7 @@
   color: white;
   justify-content: space-between;
 }
+
 .collection-types-list ul{
   font-size:x-large;
   color: #939393;
@@ -28,6 +30,7 @@
 .collection-types-list ul li{
   padding-top: 15px;
 }
+
 .builder{
   font-size:x-large;
   color:white;
@@ -35,6 +38,7 @@
   background-color: black;
   padding: 5px;
 }
+
 @media only screen and (max-width: 660px) {
   .collection-types-list ul {
     font-size: x-small;

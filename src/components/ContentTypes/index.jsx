@@ -6,8 +6,6 @@ import magnifyingGlass from '../../assets/icon-search-dark.png';
 import deleteButton from '../../assets/trash-delete-recycle-bin-bucket-waste.png';
 import editButton from '../../assets/user-edit-text-message-note.png';
 import axios from 'axios';
-import PropTypes from 'prop-types';
-// import { NewTypes } from '../../components';
 
 const ContentTypes = props => {
   const [selectedContentType, setSelectedContentType] = React.useState('CompanyProfile');
@@ -43,6 +41,7 @@ const ContentTypes = props => {
         console.log(err);
       });
   };
+
   const createNewFieldHandler = e => {
     axios
       .patch('http://localhost:8080/attributes/create', {
@@ -58,6 +57,7 @@ const ContentTypes = props => {
         console.log(err);
       });
   };
+
   const deleteFieldHandler = attribute => {
     const token = localStorage.getItem('token');
     console.log(attribute, selectedContentData.id);
@@ -75,6 +75,7 @@ const ContentTypes = props => {
         console.log(err);
       });
   };
+
   window.onclick = e => {
     if (e.target.className === 'modal') {
       setModalIsOpen('none');
@@ -119,10 +120,10 @@ const ContentTypes = props => {
           Content Types
         </h1>
       </div>
+
       <div className="modal" style={{ display: modalIsOpen }}>
         <div className="modal-content">
           <h3>Create a New Content Type</h3>
-
           <div className="new-content">
             <p>Name of the content type</p>
             <input
@@ -147,10 +148,10 @@ const ContentTypes = props => {
           </div>
         </div>
       </div>
+
       <div className="modal2" style={{ display: modal2IsOpen }}>
         <div className="modal-content2">
           <h3>Create a New Field</h3>
-
           <div className="new-content">
             <p>Name of the field</p>
             <input
@@ -175,6 +176,7 @@ const ContentTypes = props => {
           </div>
         </div>
       </div>
+
       <div className="container">
         <div className="new-types-content">
           <div className="new-types-header">
@@ -190,6 +192,7 @@ const ContentTypes = props => {
               + New Type
             </div>
             <div className="existing-types">
+
               {contentTypes.map(contentType => {
                 console.log('contentType: ', contentType);
                 return (
@@ -204,6 +207,7 @@ const ContentTypes = props => {
                   </div>
                 );
               })}
+
             </div>
           </div>
           <div className="single-type-fields"></div>
@@ -222,10 +226,12 @@ const ContentTypes = props => {
             }}>
             Add another field
           </div>
+
           <div className="existing-fields">
             {selectedContentData &&
               selectedContentData.attributes &&
               selectedContentData.attributes.map(attribute => {
+
                 if (attribute) {
                   return (
                     <div className="existing-field">
@@ -249,11 +255,9 @@ const ContentTypes = props => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
-// ContentTypes.propTypes = {
-//   selectedContentType: PropTypes.string,
-//   setSelectedContentType: PropTypes.func,
-// };
+
 export default ContentTypes;

@@ -10,6 +10,7 @@ const ProtectedRoutes = ({ children }) => {
   const navigate = useNavigate();
   const [token, setToken] = React.useState(null);
   const [user, setUser] = React.useState('');
+
   React.useEffect(() => {
     const value = localStorage.getItem('token');
     axios
@@ -37,6 +38,7 @@ const ProtectedRoutes = ({ children }) => {
               You are not authorized to View this Page
             </div>
             <div className="title-2">Oops, You don't have permission to access this page.</div>
+            
             <div
               className="buttons"
               onClick={() => {

@@ -2,11 +2,12 @@
 import React from 'react';
 import axios from 'axios';
 import './index.css';
-// import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
+
 const InputCredentialsForRegister = () => {
   const [userName, setUserName] = React.useState('');
   const [password, setPassword] = React.useState('');
+
   const registrationHandler = () => {
     axios
       .post('http://localhost:4000/user', {
@@ -20,13 +21,17 @@ const InputCredentialsForRegister = () => {
         alert('User already exists');
       });
   };
+
   const userNameChangeHandler = event => {
     setUserName(event.target.value);
   };
+
   const passwordChangeHandler = event => {
     setPassword(event.target.value);
   };
+
   const navigate = useNavigate();
+
   return (
     <div className="inputForm">
       <div className="heading">
@@ -45,6 +50,7 @@ const InputCredentialsForRegister = () => {
           Register
         </button>
         <a href="">Forgot Password?</a>
+
         <a
           href=""
           className="other-Option"

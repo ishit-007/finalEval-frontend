@@ -1,15 +1,18 @@
-import LoginScreenImage from '../LoginScreenImage';
-import { render } from '@testing-library/react';
+/* eslint-disable react/no-unescaped-entities */
+import displayScreenImage from '../../assets/undraw-upload-re-pasx@3x.png';
 import React from 'react';
+import './index.css';
 
-describe('LoginScreenImage', () => {
-  it('renders the component', () => {
-    const { getByAltText, getByText } = render(<LoginScreenImage />);
-    const image = getByAltText('Login Screen');
-    const title1 = getByText(/Design API's fast,/i);
-    const title2 = getByText(/Manage content easily./i);
-    expect(image).toBeInTheDocument();
-    expect(title1).toBeInTheDocument();
-    expect(title2).toBeInTheDocument();
-  });
-});
+const LoginScreenImage = () => {
+  return (
+    <div className="loginImage">
+      <img src={displayScreenImage} alt="Login Screen" />
+      <div className="content">
+        <h1>Design API's fast,</h1>
+        <h1>Manage content easily.</h1>
+      </div>
+    </div>
+  );
+};
+
+export default LoginScreenImage;

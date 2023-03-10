@@ -3,6 +3,7 @@
   background-color: blue;
   width: 70vw;
 }
+
 .content-types .heading {
   margin-bottom: 0;
   background-color: white;
@@ -11,25 +12,30 @@
   padding-top: 20px;
   padding-left: 20px;
 }
+
 .new-content {
   display: flex;
   flex-direction: column;
 }
+
 .new-content input {
   width: 500px;
 }
+
 .modal-content,
 .modal-content2 {
   border-radius: 10px;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 40px;
   border: 1px solid #888;
-  width: 35%; /* Could be more or less, depending on screen size */
+  width: 35%;
 }
+
 .new-content p {
   margin-top: 20px;
 }
+
 .modal-content input,
 .modal-content2 input {
   width: 90%;
@@ -38,6 +44,7 @@
   border-radius: 5px;
   border: 1px solid rgb(18, 154, 252);
 }
+
 .btns {
   gap: 1rem;
   margin-top: 25px;
@@ -45,6 +52,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .btns .cancel {
   background-color: inherit;
   border: none;
@@ -52,6 +60,7 @@
   font-weight: 700;
   font-size: medium;
 }
+
 .btns .create {
   font-weight: 700;
   font-size: medium;
@@ -63,20 +72,22 @@
   width: 200px;
   border-radius: 6px;
 }
+
 .modal,
 .modal2 {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 .existing {
   border-radius: 6px;
   color: #939393;
@@ -91,6 +102,7 @@
   background-color: white;
   font-weight: 600;
 }
+
 .addNewType {
   font-weight: 600;
   margin-left: 10%;
@@ -105,10 +117,12 @@
   border-style: dashed;
   border-radius: 6px;
 }
+
 .container {
   background-color: #ebeefe;
   height: 92%;
 }
+
 .one-type-fields {
   position: absolute;
   right: 0;
@@ -117,25 +131,31 @@
   width: 49%;
   height: 92%;
 }
+
 .one-type-fields {
   background-color: #ebeefe;
 }
-.one-type-fields .heading h3{
+
+.one-type-fields .heading h3 {
   margin-top: 15px;
 }
+
 .one-type-fields .heading {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   background-color: #ebeefe;
 }
+
 .one-type-fields .heading h3 {
   padding-top: 10px;
   color: #95969e;
 }
+
 .container .new-types-content {
   height: 92%;
 }
+
 .container .new-types {
   padding-bottom: 0;
   overflow: scroll;
@@ -143,6 +163,7 @@
   height: 100%;
   background-color: #d4d6e5;
 }
+
 .container .new-types-header {
   padding-left: 35px;
   padding-top: 20px;
@@ -153,6 +174,7 @@
   display: flex;
   justify-content: space-between;
 }
+
 .addField {
   font-weight: 600;
   color: #5a03ce;
@@ -168,9 +190,11 @@
   border: 1px #5a03ce;
   border-style: dashed;
 }
+
 .existing-field img {
   margin-right: 10px;
 }
+
 .existing-field {
   color: #aaaaaa;
   border-radius: 4px;
@@ -183,6 +207,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .existing-field .logo {
   display: flex;
   align-items: center;
@@ -194,12 +219,11 @@
   background-color: #7691ff;
   height: 40px;
 }
-.existing-field .icons img{
-    height: 20px;
-    width: 20px;
-  }
 
+.existing-field .icons img {
+  height: 20px;
+  width: 20px;
+}
 
 @media only screen and (max-width: 600px) {
-  
 }

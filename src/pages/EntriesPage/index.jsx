@@ -13,6 +13,7 @@ const EntriesPage = () => {
   const [thisContentType, setThisContentType] = React.useState('');
   const [allEntries, setAllEntries] = React.useState([]);
   const { id } = useParams();
+
   React.useEffect(() => {
     const token = localStorage.getItem('token');
     axios
@@ -51,6 +52,7 @@ const EntriesPage = () => {
         console.log(err);
       });
   }, []);
+
   const deleteHandler = entry => {
     axios
       .delete(`http://localhost:8080/entry/delete/${entry.id}`)
@@ -61,11 +63,13 @@ const EntriesPage = () => {
         console.log(err);
       });
   };
+
   window.onclick = e => {
     if (e.target.className === 'modal') {
       setModalIsOpen('none');
     }
   };
+
   return (
     <div className="allEntries">
       <div className="left">
@@ -99,6 +103,7 @@ const EntriesPage = () => {
               <label htmlFor="">Name</label>
               <input type="text" />
             </div>
+
             <div className="buttons">
               <button
                 className="cancel"
@@ -109,6 +114,7 @@ const EntriesPage = () => {
               </button>
               <button className="save">Save</button>
             </div>
+
           </div>
         </div>
         <div className="heading">
@@ -116,6 +122,7 @@ const EntriesPage = () => {
         </div>
         <div className="entries">
           <div className="numEntries">
+
             <h1>{allEntries.length} Entries Found</h1>
             <p
               onClick={() => {
@@ -125,6 +132,7 @@ const EntriesPage = () => {
             </p>
           </div>
           <div className="entriesList">
+            
             {allEntries.map(entry => {
               return (
                 <div className="entry" key={entry.id}>

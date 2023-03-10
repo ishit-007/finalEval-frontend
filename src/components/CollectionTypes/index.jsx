@@ -10,8 +10,8 @@ import LoginPage from '../../pages/LoginPage';
 const CollectionTypes = props => {
   const [contentTypes, setContentTypes] = React.useState([]);
   const [selectedContentData, setSelectedContentData] = React.useState([]);
-
   const navigate = useNavigate();
+
   React.useEffect(() => {
     const token = localStorage.getItem('token');
     axios
@@ -37,6 +37,7 @@ const CollectionTypes = props => {
         console.log(err);
       });
   }, []);
+
   return (
     <div className="collection-types">
       <div className="heading">
@@ -74,7 +75,5 @@ const CollectionTypes = props => {
     </div>
   );
 };
-// CollectionTypes.propTypes = {
-//   setSelectedContentType: PropTypes.func.isRequired,
-// };
+
 export default CollectionTypes;

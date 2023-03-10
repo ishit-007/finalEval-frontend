@@ -12,23 +12,28 @@
   justify-content: center;
   float: right;
 }
+
 .inputForm label {
   color: #79797a;
   font-weight: 400;
 }
+
 .other-Option{
   padding-top: 10px;
   text-decoration: none;
 }
+
 .heading {
   margin-bottom: 50px;
 }
+
 .emailInput,
 .passwordInput {
   width: 70%;
   display: flex;
   flex-direction: column;
 }
+
 .inputForm input {
   border: none;
   margin-top: 10px;
@@ -36,6 +41,7 @@
   height: 35px;
   border-radius: 6px;
 }
+
 .submitBtn {
   width: 70%;
   display: flex;
@@ -43,6 +49,7 @@
   align-content: center;
   justify-content: center;
 }
+
 .submitBtn button {
   font-weight: 700;
   border: none;
@@ -53,11 +60,13 @@
   color: white;
   background-color: #6740ff;
 }
+
 .submitBtn a {
   font-weight: 400;
   color: #737373;
   text-align: center;
 }
+
 @media only screen and (max-width: 800px) {
   .inputForm {
     width: 100%;
