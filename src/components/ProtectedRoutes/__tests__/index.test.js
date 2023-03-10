@@ -7,7 +7,7 @@ jest.mock('react-router-dom');
 
 describe('ProtectedRoutes for Login', () => {
   it('should render the ProtectedRoutes component', async () => {
-    const tree = renderer.create(<ProtectedRoutes text=""/>).toJSON();
+    const tree = renderer.create(<ProtectedRoutes text="" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

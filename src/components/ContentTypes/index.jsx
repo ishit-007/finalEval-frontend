@@ -9,7 +9,6 @@ import axios from 'axios';
 
 const ContentTypes = props => {
   const [selectedContentType, setSelectedContentType] = React.useState('CompanyProfile');
-
   const [modal2IsOpen, setModal2IsOpen] = React.useState('none');
   const [selectedContentData, setSelectedContentData] = React.useState([]);
   const [newContentType, setNewContentType] = React.useState('');
@@ -192,7 +191,6 @@ const ContentTypes = props => {
               + New Type
             </div>
             <div className="existing-types">
-
               {contentTypes.map(contentType => {
                 console.log('contentType: ', contentType);
                 return (
@@ -207,7 +205,6 @@ const ContentTypes = props => {
                   </div>
                 );
               })}
-
             </div>
           </div>
           <div className="single-type-fields"></div>
@@ -231,13 +228,12 @@ const ContentTypes = props => {
             {selectedContentData &&
               selectedContentData.attributes &&
               selectedContentData.attributes.map(attribute => {
-
                 if (attribute) {
                   return (
                     <div className="existing-field">
                       <div className="logo">Ab</div>
-                      <div>{attribute}</div>
-                      <div>Text</div>
+                      <div contentEditable="true">{attribute}</div>
+                      <div contentEditable="true">Text</div>
                       <div className="icons">
                         <img
                           src={deleteButton}
@@ -255,7 +251,6 @@ const ContentTypes = props => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

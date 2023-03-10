@@ -34,7 +34,7 @@ const EntriesPage = () => {
         console.log(filteredData[0]);
         setThisContentType(filteredData[0]);
         axios
-          .get(`http://localhost:8080/entries/contentType/${id}`,{
+          .get(`http://localhost:8080/entries/contentType/${id}`, {
             headers: {
               token: token,
             },
@@ -63,7 +63,9 @@ const EntriesPage = () => {
         console.log(err);
       });
   };
-
+  const editHandler = entry => {
+    console.log(entry);
+  };
   window.onclick = e => {
     if (e.target.className === 'modal') {
       setModalIsOpen('none');
@@ -114,7 +116,6 @@ const EntriesPage = () => {
               </button>
               <button className="save">Save</button>
             </div>
-
           </div>
         </div>
         <div className="heading">
@@ -122,7 +123,6 @@ const EntriesPage = () => {
         </div>
         <div className="entries">
           <div className="numEntries">
-
             <h1>{allEntries.length} Entries Found</h1>
             <p
               onClick={() => {
@@ -132,7 +132,6 @@ const EntriesPage = () => {
             </p>
           </div>
           <div className="entriesList">
-            
             {allEntries.map(entry => {
               return (
                 <div className="entry" key={entry.id}>
@@ -141,7 +140,14 @@ const EntriesPage = () => {
                   <p>Text</p>
                   <p>Text</p>
                   <div className="icons">
-                    <img src={editButton} style={{ height: '25px', width: '25px', margin: '10px' }} alt="" />
+                    <img
+                      src={editButton}
+                      style={{ height: '25px', width: '25px', margin: '10px' }}
+                      alt=""
+                      onClick={() => {
+                        editHandler(entry);
+                      }}
+                    />
                     <img
                       src={deleteButton}
                       style={{ height: '25px', width: '25px', margin: '10px' }}
