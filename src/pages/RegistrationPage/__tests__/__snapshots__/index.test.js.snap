@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RegistrationPage should render the RegistrationPage component 1`] = `
+<div
+  className="loginPage"
+>
+  <div
+    className="loginPage__left"
+  >
+    <div
+      className="loginImage"
+    >
+      <img
+        alt="Login Screen"
+        src="undraw-upload-re-pasx@3x.png"
+      />
+      <div
+        className="content"
+      >
+        <h1>
+          Design API's fast,
+        </h1>
+        <h1>
+          Manage content easily.
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div
+    className="loginPage__right"
+  >
+    <div
+      className="inputForm"
+    >
+      <div
+        className="heading"
+      >
+        <h1>
+          Register to your CMS+ Account
+        </h1>
+      </div>
+      <div
+        className="emailInput"
+      >
+        <label
+          htmlFor=""
+        >
+          Email
+        </label>
+        <input
+          id="email"
+          name="email"
+          onChange={[Function]}
+          type="email"
+        />
+      </div>
+      <div
+        className="passwordInput"
+      >
+        <label
+          htmlFor=""
+        >
+          Password
+        </label>
+        <input
+          id="password"
+          name="password"
+          onChange={[Function]}
+          type="password"
+        />
+      </div>
+      <div
+        className="submitBtn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Register
+        </button>
+        <a
+          href=""
+        >
+          Forgot Password?
+        </a>
+        <a
+          className="other-Option"
+          href=""
+          onClick={[Function]}
+        >
+          Login Instead
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

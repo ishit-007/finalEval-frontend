@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProtectedRoutes for Login should render the ProtectedRoutes component 1`] = `
+<div>
+  <div
+    className="unAuthorized"
+  >
+    <div
+      className="text"
+    >
+      <div
+        className="title"
+        data-content="404"
+      >
+        You are not authorized to View this Page
+      </div>
+      <div
+        className="title-2"
+      >
+        Oops, You don't have permission to access this page.
+      </div>
+      <div
+        className="buttons"
+        onClick={[Function]}
+      >
+        <a
+          className="button"
+          href=""
+        >
+          Go to Login Page
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

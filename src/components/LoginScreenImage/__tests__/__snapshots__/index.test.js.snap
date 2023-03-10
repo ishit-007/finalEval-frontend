@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginScreenImage for Login should render the LoginScreenImage component 1`] = `
+<div
+  className="loginImage"
+>
+  <img
+    alt="Login Screen"
+    src="undraw-upload-re-pasx@3x.png"
+  />
+  <div
+    className="content"
+  >
+    <h1>
+      Design API's fast,
+    </h1>
+    <h1>
+      Manage content easily.
+    </h1>
+  </div>
+</div>
+`;

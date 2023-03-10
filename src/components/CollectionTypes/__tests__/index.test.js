@@ -7,6 +7,5 @@ describe('CollectionTypes', () => {
   it('should render the CollectionTypes component', async () => {
     const { asFragment } = render(<CollectionTypes />);
     expect(asFragment()).toMatchSnapshot();
-    // expect(queryByText('CMS+')).toBeTruthy();
   });
 });
