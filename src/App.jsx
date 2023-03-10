@@ -5,6 +5,7 @@ import RegistrationPage from './pages/RegistrationPage';
 import ContentTypesPage from './pages/ContentTypesPage';
 import EntriesPage from './pages/EntriesPage';
 import { Routes, Route } from 'react-router-dom';
+import ProtectedRoutes from './components/ProtectedRoutes';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/register" element={<RegistrationPage/>} />
         <Route path="/content-types" element={<ContentTypesPage/>} />
-        <Route path="/content-types/:id" element={<EntriesPage/>} />
+        <Route path="/content-types/:id" element={<ProtectedRoutes><EntriesPage/></ProtectedRoutes>} />
       </Routes>
     </div>
   );
