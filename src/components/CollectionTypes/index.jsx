@@ -3,12 +3,15 @@ import './index.css';
 import magnifyingGlass from '../../assets/icon-search-dark.png';
 import React from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import LoginPage from '../../pages/LoginPage';
 
 const CollectionTypes = props => {
   const [contentTypes, setContentTypes] = React.useState([]);
   const [selectedContentData, setSelectedContentData] = React.useState([]);
+
+  const navigate = useNavigate();
   React.useEffect(() => {
     axios
       .get('http://localhost:8080/contentTypes/all')
@@ -46,8 +49,7 @@ const CollectionTypes = props => {
                 <li
                   key={contentType.id}
                   onClick={() => {
-                    console.log(contentType.name);
-                    // props.setSelectedContentType(contentType.name);
+                    navigate(`/content-types/${contentType.id}`);
                   }}>
                   {contentType.name}
                 </li>
@@ -56,7 +58,12 @@ const CollectionTypes = props => {
           </ul>
         </div>
         <div className="builder">
-          <p>CONTENT TYPE BUILDER</p>
+          <p
+            onClick={() => {
+              navigate('/content-types');
+            }}>
+            CONTENT TYPE BUILDER
+          </p>
         </div>
       </div>
     </div>

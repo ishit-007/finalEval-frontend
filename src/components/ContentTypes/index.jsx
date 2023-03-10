@@ -49,7 +49,18 @@ const ContentTypes = props => {
         console.log(err);
       });
   };
-
+  const deleteFieldHandler = attribute => {
+    console.log(attribute, selectedContentData.id);
+    axios
+      .delete(`http://localhost:8080/attributes/delete/${selectedContentData.id}/${attribute}`, )
+      .then(resp => {
+        console.log(resp);
+        window.location.reload();
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   window.onclick = e => {
     if (e.target.className === 'modal') {
       setModalIsOpen('none');
@@ -196,7 +207,14 @@ const ContentTypes = props => {
                       <div>{attribute}</div>
                       <div>Text</div>
                       <div className="icons">
-                        <img src={deleteButton} alt="" style={{ height: '20px', width: '20px' }} />
+                        <img
+                          src={deleteButton}
+                          alt=""
+                          style={{ height: '20px', width: '20px' }}
+                          onClick={() => {
+                            deleteFieldHandler(attribute);
+                          }}
+                        />
                         <img src={editButton} alt="" style={{ height: '20px', width: '20px' }} />
                       </div>
                     </div>
